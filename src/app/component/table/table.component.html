@@ -115,7 +115,7 @@
               pRipple
               type="button"
               icon="pi pi-pencil"
-              (click)="onRowEditInit(data)"
+              (click)="EditInit(data)"
               class="p-button-rounded p-button-text"
             ></button>
             <button
@@ -124,7 +124,7 @@
               pRipple
               type="button"
               icon="pi pi-trash"
-              (click)="onRowDelete(data)"
+              (click)="Delete(data)"
               class="p-button-rounded p-button-text p-button-danger"
             ></button>
             <button
@@ -133,7 +133,7 @@
               pRipple
               type="button"
               icon="pi pi-check"
-              (click)="onRowEditSave(data)"
+              (click)="EditSave(data)"
               class="p-button-rounded p-button-text p-button-success mr-2"
             ></button>
             <button
@@ -142,7 +142,7 @@
               pRipple
               type="button"
               icon="pi pi-times"
-              (click)="onRowEditCancel(data, ri)"
+              (click)="EditCancel(data, ri)"
               class="p-button-rounded p-button-text p-button-danger"
             ></button>
           </div>

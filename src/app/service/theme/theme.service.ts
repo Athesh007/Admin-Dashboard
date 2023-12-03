@@ -9,6 +9,5 @@ export class ThemeService {
   switchTheme(light: boolean) {
     let element = this.document.getElementById('theme') as HTMLLinkElement;
     element.href = light ? 'light-theme.css' : 'dark-theme.css';
-    console.log(light);
   }
 }

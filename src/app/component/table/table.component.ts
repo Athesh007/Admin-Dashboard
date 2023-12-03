@@ -41,7 +41,6 @@ export class TableComponent implements OnInit {
 
   theme() {
     this.themeService.switchTheme(this.light);
-    console.log(this.light);
   }
 
   ngOnInit() {
@@ -58,20 +57,20 @@ export class TableComponent implements OnInit {
     this.selectedData = null;
   }
 
-  onRowEditInit(data: any) {
+  EditInit(data: any) {
     this.clonedData[data.id as string] = { ...data };
   }
 
-  onRowEditSave(data: any) {
+  EditSave(data: any) {
     delete this.clonedData[data.id as string];
   }
 
-  onRowEditCancel(data: any, index: number) {
+  EditCancel(data: any, index: number) {
     this.data[index] = this.clonedData[data.id as string];
     delete this.clonedData[data.id as string];
   }
 
-  onRowDelete(data: any) {
+  Delete(data: any) {
     const index = this.data.filter((item: { id: any }) => item.id === data.id);
     if (index !== -1) {
       this.data.splice(index, 1);
