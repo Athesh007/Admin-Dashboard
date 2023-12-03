@@ -57,20 +57,20 @@ export class TableComponent implements OnInit {
     this.selectedData = null;
   }
 
-  EditInit(data: any) {
+  onRowEditInit(data: any) {
     this.clonedData[data.id as string] = { ...data };
   }
 
-  EditSave(data: any) {
+  onRowEditSave(data: any) {
     delete this.clonedData[data.id as string];
   }
 
-  EditCancel(data: any, index: number) {
+  onRowEditCancel(data: any, index: number) {
     this.data[index] = this.clonedData[data.id as string];
     delete this.clonedData[data.id as string];
   }
 
-  Delete(data: any) {
+  onRowDelete(data: any) {
     const index = this.data.filter((item: { id: any }) => item.id === data.id);
     if (index !== -1) {
       this.data.splice(index, 1);
